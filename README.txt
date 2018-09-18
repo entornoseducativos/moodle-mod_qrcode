@@ -1,53 +1,18 @@
-The following steps should get you up and running with
-this module template code.
+This activity plugin was created using this templage: https://github.com/moodlehq/moodle-mod_newmodule
 
-* DO NOT PANIC!
+Currently, MoodleQR is a plugin, an App, and an idea. The idea is to allow teachers to grade assignments by scanning a QR code. Generally I use this technique to make grading assignments during class go more quickly, but there are many applications. For example, students could copy and paste the QR codes into their assignments.
 
-* Unzip the archive and read this file
+Currently, the plugin is a very simple activity plugin that encodes the server's url, the course id, the activity id, the student id, and the maximum grade for the assignment into a QR code. Upon scanning the QR code, an app submits a grade to the server using Moodle's web service capability. To communicate with the server, the administrator does need to provide users of the app with a token.
 
-* Rename the qrcode/ folder to the name of your module (eg "widget").
-  The module folder MUST be lower case and can't contain underscores. You should check the CVS contrib
-  area at http://cvs.moodle.org/contrib/plugins/mod/ to make sure that
-  your name is not already used by an other module. Registering the plugin
-  name @ http://moodle.org/plugins will secure it for you.
+While the plugin is functional, I am fairly certain it is in need of improvement as this is my first plugin and I'm not sure of the best way to go about adding code.
+1. Where should I put it?
+2. What methods should I use for adding it?
 
-* Edit all the files in this directory and its subdirectories and change
-  all the instances of the string "qrcode" to your module name
-  (eg "widget"). If you are using Linux, you can use the following command
-  $ find . -type f -exec sed -i 's/qrcode/widget/g' {} \;
-  $ find . -type f -exec sed -i 's/QRCODE/WIDGET/g' {} \;
+Any pointers would be greatly appreciated.
 
-  On a mac, use:
-  $ find . -type f -exec sed -i '' 's/qrcode/widget/g' {} \;
-  $ find . -type f -exec sed -i '' 's/QRCODE/WIDGET/g' {} \;
+While this plugin serves my purposes, it would be better if this concept were integrated into the assign activity plugin as a submission type. I foresee wanting to using the same Moodle course with other teachers who would like to grade their students using a more conventional submission type while I scan QR codes. I attempted to make this modification to the assign activity plugin myself, but I was unsure how to go about making this modification.
+1. How do I add a checkbox?
+2. How do I add a corresponding field to the database to record this setting?
+3. Where do I add the code that would display the QR code?
 
-* Rename the file lang/en/qrcode.php to lang/en/widget.php
-  where "widget" is the name of your module
-
-* Rename all files in backup/moodle2/ folder by replacing "qrcode" with
-  the name of your module
-
-  On Linux you can perform this and previous steps by calling:
-  $ find . -depth -name '*qrcode*' -execdir bash -c 'mv -i "$1" "${1//qrcode/widget}"' bash {} \;
-
-* Place the widget folder into the /mod folder of the moodle
-  directory.
-
-* Modify version.php and set the initial version of you module.
-
-* Visit Settings > Site Administration > Notifications, you should find
-  the module's tables successfully created
-
-* Go to Site Administration > Plugins > Activity modules > Manage activities
-  and you should find that this qrcode has been added to the list of
-  installed modules.
-
-* You may now proceed to run your own code in an attempt to develop
-  your module. You will probably want to modify mod_form.php and view.php
-  as a first step. Check db/access.php to add capabilities.
-  Go to Settings > Site Administration > Development > XMLDB editor
-  and modify the module's tables.
-
-We encourage you to share your code and experience - visit http://moodle.org
-
-Good luck!
+Again, any pointers would be greatly apprediated.
