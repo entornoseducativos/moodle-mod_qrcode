@@ -19,7 +19,7 @@
  *
  * @package   mod_qrcode
  * @category  grade
- * @copyright 2016 Your Name <your@email.address>
+ * @copyright 2018 Michael Backus {@link http://gradeqr.akrobotnerd.com}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

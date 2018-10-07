@@ -21,7 +21,7 @@
  * visit: http://docs.moodle.org/en/Development:lib/formslib.php
  *
  * @package    mod_qrcode
- * @copyright  2016 Your Name <your@email.address>
+ * @copyright  2018 Michael Backus {@link http://gradeqr.akrobotnerd.com}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -69,11 +69,6 @@ class mod_qrcode_mod_form extends moodleform_mod {
 
         // Adding the rest of qrcode settings, spreading all them into this fieldset
         // ... or adding more fieldsets ('header' elements) if needed for better logic.
-        $mform->addElement('static', 'label1', 'qrcodesetting1', 'Your qrcode fields go here. Replace me!');
-
-        $mform->addElement('header', 'qrcodefieldset', get_string('qrcodefieldset', 'qrcode'));
-        $mform->addElement('static', 'label2', 'qrcodesetting2', 'Your qrcode fields go here. Replace me!');
-
         // Add standard grading elements.
         $this->standard_grading_coursemodule_elements();
 

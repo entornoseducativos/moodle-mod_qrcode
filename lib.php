@@ -25,7 +25,7 @@
  * Moodle is performing actions across all modules.
  *
  * @package    mod_qrcode
- * @copyright  2016 Your Name <your@email.address>
+ * @copyright  2018 Michael Backus {@link http://gradeqr.akrobotnerd.com}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -139,7 +139,7 @@ function qrcode_refresh_events($courseid = 0) {
 
     foreach ($qrcodes as $qrcode) {
         // Create a function such as the one below to deal with updating calendar events.
-        // qrcode_update_events($qrcode);
+        qrcode_update_events($qrcode);
     }
 
     return true;

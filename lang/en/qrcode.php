@@ -28,14 +28,14 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$string['modulename'] = 'qrcode';
-$string['modulenameplural'] = 'qrcodes';
-$string['modulename_help'] = 'Use the qrcode module for... | The qrcode module allows...';
+$string['modulename'] = 'QR Code';
+$string['modulenameplural'] = 'QR Codes';
+$string['modulename_help'] = 'Use the qrcode module to quickly grade assignments for completiong in class by scanning QR codes with the MoodleQR app.';
 $string['qrcode:addinstance'] = 'Add a new qrcode';
 $string['qrcode:submit'] = 'Submit qrcode';
 $string['qrcode:view'] = 'View qrcode';
 $string['qrcodefieldset'] = 'Custom example fieldset';
-$string['qrcodename'] = 'qrcode name';
+$string['qrcodename'] = 'Name';
 $string['qrcodename_help'] = 'This is the content of the help tooltip associated with the qrcodename field. Markdown syntax is supported.';
 $string['qrcode'] = 'qrcode';
 $string['pluginadministration'] = 'qrcode administration';

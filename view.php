@@ -21,7 +21,7 @@
  * if you like, and it can span multiple lines.
  *
  * @package    mod_qrcode
- * @copyright  2016 Your Name <your@email.address>
+ * @copyright  2018 Michael Backus {@link http://gradeqr.akrobotnerd.com}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -77,7 +77,7 @@ if ($qrcode->intro) {
 }
 
 // Replace the following lines with you own code.
-//echo $OUTPUT->heading(format_string($strplural));
+echo $OUTPUT->heading(format_string($strplural));
 
 echo '<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data='.explode("://",$CFG->wwwroot)[1].','.$COURSE->id.','.$cm->id.','.$USER->id.','.$qrcode->grade.'">';
 

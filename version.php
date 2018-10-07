@@ -21,7 +21,7 @@
  * See https://docs.moodle.org/dev/version.php for more info.
  *
  * @package    mod_qrcode
- * @copyright  2016 Your Name <your@email.address>
+ * @copyright  2018 Michael Backus {@link http://gradeqr.akrobotnerd.com}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
