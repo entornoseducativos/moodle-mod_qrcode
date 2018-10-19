@@ -39,5 +39,4 @@ To use
 
 3) Download and install the GradeQR4Moodle.apk in the app folder onto an Android device (sorry, no iOS version yet). Set the token.
 
-Use:
-Create a new assignment and choose QR Code. Login to your Moodle server using a test student account. Scan the QR code for the assignment. You should see the max score for that student's assignment uploaded to your Moodle gradebook within a second or two.
+4) Create a new assignment and choose QR Code. Login to your Moodle server using a test student account. Scan the QR code for the assignment. You should see the max score for that student's assignment uploaded to your Moodle gradebook within a second or two.
