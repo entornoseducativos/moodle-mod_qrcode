@@ -80,7 +80,7 @@ if ($qrcode->intro) {
 // Replace the following lines with you own code.
 // echo $OUTPUT->heading(format_string($strplural));
 
-$qrcode_data = explode("://",$CFG->wwwroot)[1].','.$COURSE->id.','.$cm->id.','.$USER->id.','.$qrcode->grade;
+$qrcode_data = $CFG->wwwroot.','.$COURSE->id.','.$cm->id.','.$USER->id.','.$qrcode->grade;
 $barcode = new TCPDF2DBarcode($qrcode_data,'QRCODE');
 $image = $barcode->getBarcodePngData(12,12);
 echo html_writer::img('data:image/png;base64,'.base64_encode($image),$qrcode_data);

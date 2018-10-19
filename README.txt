@@ -1,5 +1,9 @@
 This activity plugin was created using this templage: https://github.com/moodlehq/moodle-mod_newmodule
 
+GradeQR is a plugin, an App, and an idea. The idea is to allow teachers to grade assignments by scanning a QR code. Generally I use this technique to make grading assignments during class go more quickly, but there are many applications. For example, students could copy and paste the QR codes into their assignments. Or, you might use it as a way to quickly record that they have participated in a class discussion.
+
+This plugin is a very simple activity plugin that encodes the server's url, the course id, the activity id, the student id, and the maximum grade for the assignment into a QR code. Upon scanning the QR code, an app submits a grade to the server using Moodle's web service capability. To communicate with the server, the administrator does need to provide users of the app with a token.
+
 To use
 
 1) Copy the files and folders in this repository into mod/qrcode.
@@ -21,7 +25,7 @@ To use
     j) Click "Add functions"
     k) Search for and add "core_grades_update_grades"
     l) Click "Add functions"
-    m) Create a user named GradeQR App
+    m) Create a user named "GradeQR App"
     n) Go to Site administrator > Users > Permissions > Assign system roles
     o) Click on "App"
     p) Add the "GradeQR App" user to the "Existing users" list
@@ -29,10 +33,11 @@ To use
     r) Go to Site administrator > Web services > Manage tokens and click "Add"
         - User: GradeQR App
         - Service: GradeQR Web Service
-        - Click "Save changes
-    
-3) Download and setup the app to work with your server.
+        - Click "Save changes   
+        
+    For some reason, I have to enable guest access to my courses in order to use the token. If you know how to make tokens work without enabling guest access, please share.
 
-Currently, GradeQR is a plugin, an App, and an idea. The idea is to allow teachers to grade assignments by scanning a QR code. Generally I use this technique to make grading assignments during class go more quickly, but there are many applications. For example, students could copy and paste the QR codes into their assignments. Or, you might use it as a way to quickly record that they have participated in a class discussion.
+3) Download and install the GradeQR4Moodle.apk in the app folder onto an Android device (sorry, no iOS version yet). Set the token.
 
-This plugin is a very simple activity plugin that encodes the server's url, the course id, the activity id, the student id, and the maximum grade for the assignment into a QR code. Upon scanning the QR code, an app submits a grade to the server using Moodle's web service capability. To communicate with the server, the administrator does need to provide users of the app with a token.
+Use:
+Create a new assignment and choose QR Code. Login to your Moodle server using a test student account. Scan the QR code for the assignment. You should see the max score for that student's assignment uploaded to your Moodle gradebook within a second or two.

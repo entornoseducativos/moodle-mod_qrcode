@@ -1,3 +1,5 @@
+v0.3 Removed sample code from db/upgrade.php. QR Code now encodes the server's entire url (not just the part after the ://).
+
 v0.2 Using Moodle's internal libraries to generate the QR code instead of goqr.me.
 
 v0.1 First version with basic funcionality that has yet to undergo the Moodle Plugins Directory review process.
