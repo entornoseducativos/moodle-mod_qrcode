@@ -57,9 +57,9 @@ To use
 
     p) Add the "GradeQR App" user to the "Existing users" list
 
-    q) Go to Site administrator > Web services > Manage protocals and enable the REST protocol
+    q) Go to Site administration > Plugins > Web services > Manage protocals and enable the REST protocol
 
-    r) Go to Site administrator > Web services > Manage tokens and click "Add"
+    r) Go to Site administration > Plugins > Web services > Manage tokens and click "Add"
 
         - User: GradeQR App
 

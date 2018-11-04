@@ -28,8 +28,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'mod_qrcode';
-$plugin->version = 2018101400;
-$plugin->release = 'v0.3';
+$plugin->version = 2018110300;
+$plugin->release = 'v0.4';
 $plugin->requires = 2018050800;
 $plugin->maturity = MATURITY_ALPHA;
 $plugin->cron = 0;
