@@ -30,6 +30,7 @@
 require_once(dirname(dirname(dirname(__FILE__))).'/config.php');
 require_once(dirname(__FILE__).'/lib.php');
 require_once($CFG->libdir.'/tcpdf/tcpdf_barcodes_2d.php');
+require_once($CFG->libdir.'/gradelib.php');
 
 $id = optional_param('id', 0, PARAM_INT); // Course_module ID, or
 $n  = optional_param('n', 0, PARAM_INT);  // ... qrcode instance ID - it should be named as the first character of the module.
@@ -77,10 +78,16 @@ if ($qrcode->intro) {
     echo $OUTPUT->box(format_module_intro('qrcode', $qrcode, $cm->id), 'generalbox mod_introbox', 'qrcodeintro');
 }
 
+$gradeinfo = grade_get_grades($COURSE->id, 'mod', 'qrcode', $qrcode->id, array($USER->id));
+$grade = $gradeinfo->items[0]->grades[$USER->id]->grade;
+$color = array(0, 0, 0);
+if ($grade > 0) {
+    $color = array(255, 0, 0);
+}
+
 $qrcodedata = $CFG->wwwroot.','.$COURSE->id.','.$cm->id.','.$USER->id.','.$qrcode->grade;
 $barcode = new TCPDF2DBarcode($qrcodedata, 'QRCODE');
-$image = $barcode->getBarcodePngData(12, 12);
+$image = $barcode->getBarcodePngData(12, 12, $color);
 echo html_writer::img('data:image/png;base64, '.base64_encode($image), $qrcodedata);
-
 // Finish the page.
 echo $OUTPUT->footer();
