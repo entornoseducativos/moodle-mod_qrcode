@@ -78,16 +78,20 @@ if ($qrcode->intro) {
     echo $OUTPUT->box(format_module_intro('qrcode', $qrcode, $cm->id), 'generalbox mod_introbox', 'qrcodeintro');
 }
 
-$gradeinfo = grade_get_grades($COURSE->id, 'mod', 'qrcode', $qrcode->id, array($USER->id));
-$grade = $gradeinfo->items[0]->grades[$USER->id]->grade;
-$color = array(0, 0, 0);
-if ($grade > 0) {
-    $color = array(255, 0, 0);
-}
+if (isguestuser()) {
+    echo html_writer::tag('p',get_string('guestsno','qrcode'));
+} else {	
+    $gradeinfo = grade_get_grades($COURSE->id, 'mod', 'qrcode', $qrcode->id, array($USER->id));
+    $grade = $gradeinfo->items[0]->grades[$USER->id]->grade;
+    $color = array(0, 0, 0);
+    if ($grade > 0) {
+        $color = array(255, 0, 0);
+    }
 
-$qrcodedata = $CFG->wwwroot.','.$COURSE->id.','.$cm->id.','.$USER->id.','.$qrcode->grade;
-$barcode = new TCPDF2DBarcode($qrcodedata, 'QRCODE');
-$image = $barcode->getBarcodePngData(12, 12, $color);
-echo html_writer::img('data:image/png;base64, '.base64_encode($image), $qrcodedata);
+    $qrcodedata = $CFG->wwwroot.','.$COURSE->id.','.$cm->id.','.$USER->id.','.$qrcode->grade;
+    $barcode = new TCPDF2DBarcode($qrcodedata, 'QRCODE');
+    $image = $barcode->getBarcodePngData(12, 12, $color);
+    echo html_writer::img('data:image/png;base64, '.base64_encode($image), $qrcodedata);
+}
 // Finish the page.
 echo $OUTPUT->footer();

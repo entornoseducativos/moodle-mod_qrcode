@@ -30,12 +30,12 @@ defined('MOODLE_INTERNAL') || die();
 
 $string['modulename'] = 'QR Code';
 $string['modulenameplural'] = 'QR Codes';
-$string['modulename_help'] = 'Use the qrcode module to quickly grade assignments for completiong in class by scanning QR codes with the MoodleQR app.';
+$string['modulename_help'] = 'Use the qrcode module to quickly grade assignments by scanning QR codes with the GradeQR app.';
 $string['qrcode:addinstance'] = 'Add a new QR Code';
 $string['qrcode:submit'] = 'Submit QR Code';
 $string['qrcode:view'] = 'View QR Code';
 $string['qrcodename'] = 'Name';
-$string['qrcodename_help'] = 'Not sure where this shows up.';
 $string['qrcode'] = 'qrcode';
 $string['pluginadministration'] = 'qrcode administration';
 $string['pluginname'] = 'qrcode';
+$string['guestsno'] = 'Sorry, guests cannot access QR Code activities.';
