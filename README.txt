@@ -70,4 +70,9 @@ To use
 For some reason, I have to enable guest access to my courses in order to use the token. If you know how to make tokens work without
 enabling guest access, please share.
 
-3) Download and setup the GradeQR app to work with your server.
+3) 
+    a) Download and install the app from https://sites.google.com/site/mbbackus/gradeqr
+    
+    b) Set the token.
+    
+    c) Create an assignment and scan it.
