@@ -1,3 +1,5 @@
+v0.5 Prevent guest user from viewing QR codes.
+
 v0.4 GradeQR now passes all Code checker tests. Made slight improvements to instructions in README.txt
 
 v0.3 Removed sample code from db/upgrade.php. QR Code now encodes the server's entire url (not just the part after the ://).
