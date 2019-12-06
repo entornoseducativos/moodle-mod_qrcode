@@ -49,30 +49,38 @@ To use
 
     l) Click "Add functions"
 
-    m) Create a user named "GradeQR App"
+    m) Go to Site administrator > Users > Permissions > Assign system roles
 
-    n) Go to Site administrator > Users > Permissions > Assign system roles
+    n) Click on "App"
 
-    o) Click on "App"
+    o) Add a user to the "Existing users" list. Let's pretend this user's name is Tommy Teacher (generally this would be a teacher for a course).
 
-    p) Add the "GradeQR App" user to the "Existing users" list
+    p) Go to Site administration > Plugins > Web services > Manage protocals and enable the REST protocol
 
-    q) Go to Site administration > Plugins > Web services > Manage protocals and enable the REST protocol
+    q) Go to Site administration > Plugins > Web services > Manage tokens and click "Add"
 
-    r) Go to Site administration > Plugins > Web services > Manage tokens and click "Add"
-
-        - User: GradeQR App
+        - User: "Tommy Teacher" (the same user you assigned to the App role).
 
         - Service: GradeQR Web Service
 
-        - Click "Save changes   
+        - Click "Save changes"  
+        
+    r) Make sure "Tommy Teacher" (the user you assigned to the App role and created a token for) is enrolled in the course.
 
-For some reason, I have to enable guest access to my courses in order to use the token. If you know how to make tokens work without
-enabling guest access, please share.
+Note: If you enable guest access for a course, anyone the administrator has created a token for will be able to scan QR codes for students in that course.
 
-3) 
-    a) Download and install the app from https://sites.google.com/site/mbbackus/gradeqr
+Note: Restricting a non-editing teacher's access to students by placing them together in a group within a course has no effect on how the gradeqr app works. These teachers will still have the ability to scan QR codes for anyone in the course (even students outside their group).
+
+3) Install and Configure the App
+
+    Android
     
-    b) Set the token.
+        a) Download and install the app from https://sites.google.com/site/mbbackus/gradeqr
+        
+        b) Set the token.
+        
+        c) Create an assignment and scan it.
+        
+    iOS
     
-    c) Create an assignment and scan it.
+        a) Contact me via http://www.akrobotnerd.com/contact-me and ask for a beta version of the GradeQR app for iOS.
